@@ -1,11 +1,6 @@
 import { trainers } from "../data/content";
 import { Arrow } from "./Icons";
 
-const initials = (name: string) =>
-  name
-    .split(" ")
-    .map((n) => n[0])
-    .join("");
 
 export default function Trainers() {
   return (

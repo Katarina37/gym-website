@@ -1,7 +1,6 @@
 import Logo from "./Logo";
 import { gym } from "../data/content";
 import {
-  Arrow,
   Clock,
   Facebook,
   Instagram,

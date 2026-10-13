@@ -683,6 +683,10 @@ ul {
 .program-feature {
   min-height: 360px;
 
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
   padding: 30px;
 
   position: relative;
@@ -752,10 +756,8 @@ ul {
 }
 
 .program-content {
-  position: absolute;
-  left: 30px;
-  right: 30px;
-  bottom: 28px;
+  position: relative;
+  margin-top: auto;
   z-index: 2;
 }
 
@@ -2999,8 +3001,23 @@ ul {
     grid-template-columns: 1fr;
   }
 
-  .program-feature {
-    min-height: 290px;
+    .program-feature {
+    min-height: 0;
+    padding: 24px;
+    gap: 22px;
+  }
+
+  .program-number {
+    font-size: 3.2rem;
+  }
+
+  .program-icon-large {
+    width: 36px;
+    height: 36px;
+  }
+
+  .program-content h3 {
+    font-size: 1.9rem;
   }
 
   .programs-footer {
@@ -3020,6 +3037,18 @@ ul {
 
   .schedule-spots {
     display: none;
+  }
+
+    .schedule-day {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .schedule-day:nth-child(4n) {
+    border-right: 0;
+  }
+
+  .schedule-day:nth-child(n + 5) {
+    border-bottom: 0;
   }
 
   .trainers-grid {
@@ -3063,6 +3092,21 @@ ul {
 @media (max-width: 520px) {
   .schedule-days {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .schedule-day {
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .schedule-day:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .schedule-day:last-child {
+    grid-column: 1 / -1;
+    border-right: 0;
+    border-bottom: 0;
   }
 
   .schedule-card {
